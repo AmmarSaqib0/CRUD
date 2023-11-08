@@ -9,25 +9,25 @@ app.set("view engine", "ejs");
 // Get request
 app.get('/', function (req, res) {
 
-    // // Config your database credential
-    // const config = {
-    //     user: 'product.env.user',
-    //     password: 'product.env.password',
-    //     server: 'product.env.server',
-    //     database: 'product.env.database',
-    //     trustServerCertificate: product.env.trustServerCertificate
-    // };
+    // Config your database credential
+    const config = {
+        user: 'product.env.user',
+        password: 'product.env.password',
+        server: 'product.env.server',
+        database: 'product.env.database',
+        trustServerCertificate: product.env.trustServerCertificate
+    };
 
-    // // Connect to your database
-    // mssql.connect(config, function (err) {
-    //     let request = new mssql.Request();
-    //     request.query('select * from countries',
-    //         function (err, records) {
+    // Connect to your database
+    mssql.connect(config, function (err) {
+        let request = new mssql.Request();
+        request.query('select * from countries',
+            function (err, records) {
 
-    //             if (err) console.log(err)
-    //             res.send(records);
-    //         });
-    // });
+                if (err) console.log(err)
+                res.send(records);
+            });
+    });
     res.render("viewdata.ejs");
 });
 
