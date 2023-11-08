@@ -11,11 +11,11 @@ app.get('/', function (req, res) {
 
     // // Config your database credential
     // const config = {
-    //     user: 'sa',
-    //     password: '1226',
-    //     server: 'DESKTOP-J22VOBB',
-    //     database: 'ammar',
-    //     trustServerCertificate: true
+    //     user: 'product.env.user',
+    //     password: 'product.env.password',
+    //     server: 'product.env.server',
+    //     database: 'product.env.database',
+    //     trustServerCertificate: product.env.trustServerCertificate
     // };
 
     // // Connect to your database
