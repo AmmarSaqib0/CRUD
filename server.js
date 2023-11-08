@@ -2,33 +2,33 @@
 const express = require('express');
 const app = express();
 const mssql = require("mssql");
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.set("view engine", "ejs");
 
 
 // Get request
 app.get('/', function (req, res) {
-
     // Config your database credential
     const config = {
-        user: 'product.env.user',
-        password: 'product.env.password',
-        server: 'product.env.server',
-        database: 'product.env.database',
-        trustServerCertificate: product.env.trustServerCertificate
+        user: process.env.user,
+        password: process.env.password,
+        server: process.env.server,
+        database: process.env.database,
+        trustServerCertificate: true
     };
 
     // Connect to your database
     mssql.connect(config, function (err) {
         let request = new mssql.Request();
-        request.query('select * from countries',
+        request.query('select * from employees',
             function (err, records) {
-
                 if (err) console.log(err)
-                res.send(records);
+                console.log(records.recordset.length);
+                res.render("viewdata.ejs", { records: records.recordset });
             });
     });
-    res.render("viewdata.ejs");
 });
 
 
