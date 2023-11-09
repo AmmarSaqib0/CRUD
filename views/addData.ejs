@@ -12,46 +12,50 @@
 <body class="bg-secondary">
     <div class="container mt-5">
         <h1 class="text-center mb-5 text-white">Library Mangement Center</h1>
-        <form action="" id="bookForm">
+        <form action="/" method="post">
             <div class="form-group mb-1 text-white">
                 <label for="empId">Emp Id:</label>
-                <input type="text" id="empId" class="form-control" placeholder="Enter employee Id" required>
+                <input type="text" name="empId" id="empId" class="form-control" placeholder="Enter employee Id"
+                    required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="fName">First Name:</label>
-                <input type="text" id="fname" class="form-control" placeholder="Enter fname Name" required>
+                <input type="text" name="fName" id="fname" class="form-control" placeholder="Enter fname Name" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="lName">Last Name:</label>
-                <input type="text" id="lName" class="form-control" placeholder="Enter last Name" required>
+                <input type="text" name="lName" id="lName" class="form-control" placeholder="Enter last Name" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="email">email:</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter email " required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter email " required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="pNumber">Phone Number:</label>
-                <input type="tel" id="pNumber" class="form-control" placeholder="Enter Phone Number" required>
+                <input type="tel" id="pNumber" name="pNumber" class="form-control" placeholder="Enter Phone Number"
+                    required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="hireDate"> Hire date:</label>
-                <input type="datetime-local" id="hireDate" class="form-control" placeholder="Enter Hire Id" required>
+                <input type="datetime-local" id="hireDate" name="hireDate" class="form-control"
+                    placeholder="Enter Hire Id" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="jobId">Job Id:</label>
-                <input type="number" id="jobId" class="form-control" placeholder="Enter job Id" required>
+                <input type="number" id="jobId" name="jobId" class="form-control" placeholder="Enter job Id" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="salary">Salary:</label>
-                <input type="number" id="salary" class="form-control" placeholder="Enter Salary" required>
+                <input type="number" id="salary" name="salary" class="form-control" placeholder="Enter Salary" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="MId">Manager Id:</label>
-                <input type="number" id="MId" class="form-control" placeholder="Enter Manager Id" required>
+                <input type="number" id="mId" name="mId" class="form-control" placeholder="Enter Manager Id" required>
             </div>
             <div class="form-group mb-2 text-white">
                 <label for="dId">Department Id:</label>
-                <input type="number" id="dId" class="form-control" placeholder="Enter Department Id" required>
+                <input type="number" id="dId" name="dId" class="form-control" placeholder="Enter Department Id"
+                    required>
             </div>
             <button class="btn btn-success" type="submit" id="addBtn">Add Employee</button>
             <button class="btn btn-warning" type="button" id="clearBtn">Clear All Fields</button>
