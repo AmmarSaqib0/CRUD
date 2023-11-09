@@ -5,11 +5,17 @@ const mssql = require("mssql");
 const dotenv = require('dotenv');
 dotenv.config();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+
 app.set("view engine", "ejs");
 
+app.get('/', function (req, res) {
+    res.render('addData.ejs');
+});
 
 // Get request
-app.get('/', function (req, res) {
+app.get('/view', function (req, res) {
     // Config your database credential
     const config = {
         user: process.env.user,
